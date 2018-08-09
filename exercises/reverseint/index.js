@@ -11,10 +11,8 @@
 function reverseInt(n) {
   let string = n.toString().split("").reverse().join("");
 
-  if (n < 0) {
-    return parseInt(string) * -1;
-  }
-  return parseInt(string)
+  //Math.sign gives you a 1 for a positive integer and a -1 for a negative
+  return parseInt(string) * Math.sign(n)
 }
 
 module.exports = reverseInt;
